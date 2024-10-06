@@ -6,10 +6,11 @@ from selenium.webdriver.common.keys import Keys
 
 
 class LoginPage:
-    textbox_username_xpath = "//div//input[@name='username']"
-    textbox_password_xpath = "//input[@placeholder='Password']"
+    textbox_username_xpath = "//input[@placeholder='username']"
+    textbox_password_xpath = "//input[@placeholder='password']"
     button_login_xpath = "//button[normalize-space()='Login']"
     #button_logout_xpath_list = "//li[@class='--active oxd-userdropdown']"
+    dashboard_heading_xpath = "//h6[normalize-space()='Dashboard']"
 
     def __init__(self, driver):
         self.driver = driver
@@ -39,6 +40,9 @@ class LoginPage:
         # Step 3: Click on "Logout" option
         logout_option = self.driver.find_element(By.XPATH, "//a[text()='Logout']")
         logout_option.click()
+
+
+
 
 
 
