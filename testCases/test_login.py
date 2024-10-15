@@ -15,6 +15,7 @@ class TestId001:
 
     logger = LogGen.loggen()
 
+    @pytest.mark.sanity
     def test_opening_the_url(self, setup):
         self.logger.info("----------------------Running <test_opening_the_url------------------------")
 
@@ -37,6 +38,7 @@ class TestId001:
             self.driver.close()
             # assert False
 
+    @pytest.mark.sanity
     def test_valid_loging(self, setup):
         self.logger.info("-------------------------------Login Test is Started-----------------------")
         self.driver = setup

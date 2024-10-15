@@ -12,11 +12,17 @@ class TestAddEmployee:
     username = ReadConfig.get_username()
     password = ReadConfig.get_password()
 
+    # data of employee name
+    first_name = "Joy"
+    mid_name = "Maa"
+    last_name = "Tara"
+
+    @pytest.mark.regression
     def test_add_employee_feature_001(self, setup):
         self.driver = setup
         self.driver.get(self.baseURL)
-        self.driver.implicitly_wait(20)
         self.driver.maximize_window()
+        self.driver.implicitly_wait(20)
 
         self.obj = LoginPage(self.driver)
 
@@ -29,5 +35,16 @@ class TestAddEmployee:
 
         self.obj_addemp.click_on_pim()
         self.obj_addemp.click_on_add_employee_icon()
+        time.sleep(2)
+
+        self.obj_addemp.enter_first_name(self.first_name)
+        self.obj_addemp.enter_mid_name(self.mid_name)
+        self.obj_addemp.enter_last_name(self.last_name)
+
+        # cleare the employee id value
+        self.obj_addemp.emp_id()
+
+        self.obj_addemp.click_on_save_button()
+        time.sleep(2)
 
         self.driver.close()

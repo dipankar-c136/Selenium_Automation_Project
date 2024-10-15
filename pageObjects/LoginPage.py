@@ -6,8 +6,8 @@ from selenium.webdriver.common.keys import Keys
 
 
 class LoginPage:
-    textbox_username_xpath = "//input[@placeholder='username']"
-    textbox_password_xpath = "//input[@placeholder='password']"
+    textbox_username_xpath = "//input[@placeholder='Username']"
+    textbox_password_xpath = "//input[@placeholder='Password']"
     button_login_xpath = "//button[normalize-space()='Login']"
     #button_logout_xpath_list = "//li[@class='--active oxd-userdropdown']"
     dashboard_heading_xpath = "//h6[normalize-space()='Dashboard']"
