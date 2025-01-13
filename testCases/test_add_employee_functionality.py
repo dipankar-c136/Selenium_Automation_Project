@@ -41,7 +41,7 @@ class TestAddEmployee:
         self.obj_addemp.enter_mid_name(self.mid_name)
         self.obj_addemp.enter_last_name(self.last_name)
 
-        # cleare the employee id value
+        # clear the employee id value
         self.obj_addemp.emp_id()
 
         self.obj_addemp.click_on_save_button()

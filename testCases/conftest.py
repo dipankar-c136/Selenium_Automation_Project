@@ -4,7 +4,7 @@ import pytest
 
 # Fixtures are methods in Pytest that provide a fixed baseline for tests to run on top of.
 @pytest.fixture()
-def setup(browser):  # 'browser' fixture injected here
+def setup(browser):  # 'brow    ser' fixture injected here
     if browser == 'chrome':
         driver = webdriver.Chrome()
         print("Launching Chrome browser.......")
